@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magal Motors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/speedometer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+  <section class="cars">
+    <header>
+      <div class="logo">
+        <h2>Magal Motors</h2>
+      </div>
+      <ul>
+        <a href="#">
+          <li>Carros</li>
+        </a>
+        <a href="#simulator">
+          <li>Simulador</li>
+        </a>
+        <a href="jogo/index.html">
+          <li>Jogo</li>
+        </a>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="content">
+        <div id="pre" class="pre">
+          <h2>Selecione um carro para exibir</h2>
+        </div>
+
+        <div class="after">
+
+        </div>
+
+      </div>
+
+      <aside>
+
+      </aside>
+    </main>
+
+  </section>
+
+  <section class="simulator" id="simulator">
+
+    <img src="img/utils/street.jpg" alt="">
+
+    <div class="landscape">
+
+    </div>
+
+    <div class="panel">
+      <div class="controls">
+
+        <div class="buttons">
+          <label id="powerButton">
+            <input type="checkbox" id="power">
+            <span class="btn"></span>
+            <i class="material-icons">power_settings_new</i>
+          </label>
+
+          <label id="lightButton">
+            <input type="checkbox" id="on">
+            <span class="btn"></span>
+            <i class="material-icons">highlight</i>
+          </label>
+        </div>
+
+        <div class="marchs">
+
+          <div class="bar">
+            <input onmousemove="rangeSlide(this.value)" onchange="rangeSlide(this.value)" type="range" class="range" id="velocity" value="0" min="0" max="180">
+          </div>
+
+          <div class="options">
+            <div class="march">
+              <label>
+                <span></span>
+                <i>5</i>
+              </label>
+            </div>
+            <div class="march">
+              <label>
+                <span></span>
+                <i>4</i>
+              </label>
+            </div>
+            <div class="march">
+              <label>
+                <span></span>
+                <i>3</i>
+              </label>
+            </div>
+            <div class="march">
+              <label>
+                <span></span>
+                <i>2</i>
+              </label>
+            </div>
+            <div class="march">
+              <label>
+                <span></span>
+                <i>1</i>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="speedometer">
+        <div class="speedometerPanel">
+          <input id="myValues" value="0" type="text">
+        </div>
+      </div>
+      <div class="radio">
+
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+<script src="js/cars.js"></script>
+<script src="js/carsList.js"></script>
+
+<script>
+  start();
+</script>
+
+<script src="js/selectCar.js"></script>
+<script src="js/selectColor.js"></script>
+
+<script src="js/jquery.js"></script>
+<script src="js/speedometer.js"></script>
+
+<script type="text/javascript">
+  $("#myValues").myfunc({
+    divFact: 10,
+    eventListenerType: 'change'
+  });
+
+  let state = false;
+
+  $("#power").change(function() {
+    state = this.checked;
+    $(".speedPosition").toggleClass('off');
+    $("#velocity").val(0);
+    $("#myValues").val(0);
+    $("#myValues").trigger("change");
+  })
+
+
+  $("#velocity").mousemove(function() {
+    if (state) {
+      $("#myValues").val(this.value);
+      $("#myValues").trigger("change");
+    }
+  });
+
+  $("#velocity").change(function() {
+    if (state) {
+      $("#myValues").val(this.value);
+      $("#myValues").trigger("change");
+    }
+  });
+</script>
+
+<script src="js/leds.js"></script>
+<script src="js/velocity.js"></script>
+
+
+</html>

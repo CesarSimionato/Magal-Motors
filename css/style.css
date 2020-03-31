@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 0em;
+}
+
+section.cars {
+  width: 100%;
+  height: 100vh;
+}
+
+section.cars header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.cars header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.cars header .logo h2 {
+  font-family: 'Galada', cursive;
+  font-size: 50px;
+  color: #010101;
+}
+
+section.cars header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.cars header ul a {
+  text-decoration: none;
+}
+
+section.cars header ul li {
+  padding: 10px 30px;
+  color: #010101;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+section.cars main {
+  width: 100%;
+  height: calc(100vh - 101.25px);
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+}
+
+section.cars main .content {
+  margin: 5px 5px 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section.cars main .content .pre {
+  height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+section.cars main .content .pre.before {
+  display: none;
+}
+
+section.cars main .content .pre h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+section.cars main .content .carImg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.cars main .content .carImg img {
+  width: 100%;
+}
+
+section.cars main .content .colors {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.cars main .content .colors .color {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: black;
+}
+
+section.cars main .content .carInfo {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.cars main .content .carInfo .line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.cars main .content .carInfo .line:nth-child(2) {
+  margin-top: 40px;
+}
+
+section.cars main .content .carInfo .line div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+section.cars main .content .carInfo .line .year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+section.cars main .content .carInfo .line .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+section.cars main .content .carInfo .line .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+section.cars main aside {
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  margin-top: 5px;
+}
+
+section.cars main aside::-webkit-scrollbar {
+  width: 0em;
+}
+
+section.cars main aside .card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: 15px;
+  transition: 0.3s;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+section.cars main aside .card .thumb {
+  width: 100%;
+}
+
+section.cars main aside .card .thumb img {
+  width: 100%;
+}
+
+section.cars main aside .card .info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+section.cars main aside .card .info .name,
+section.cars main aside .card .info .img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.cars main aside .card .info .name h2 {
+  font-size: 18px;
+  color: #010101;
+}
+
+section.cars main aside .card .info .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.cars main aside .card .info .logo h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #010101;
+}
+
+section.cars main aside .card .info .img {
+  width: 100px;
+}
+
+section.cars main aside .card .info .img img {
+  width: 100%;
+}
+
+
+/* SIMULADOR */
+
+section.simulator {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+section.simulator .landscape {
+  width: 100%;
+  height: 60vh;
+}
+
+section.simulator img {
+  z-index: -9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.9);
+}
+
+section.simulator .panel {
+  background: #0c0c0c;
+  width: 100%;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+section.simulator .panel .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+section.simulator .panel .controls .buttons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#powerButton {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#powerButton .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+#powerButton input[type="checkbox"]:checked~.btn {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+#powerButton input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+#powerButton i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em !important;
+  color: #0c0c0c;
+}
+
+#powerButton input[type="checkbox"]:checked~i {
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00a1ff, 0 0 15px #00a1ff;
+}
+
+#lightButton {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#lightButton .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+#lightButton input[type="checkbox"]:checked~.btn {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+#lightButton input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+#lightButton i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em !important;
+  color: #0c0c0c;
+}
+
+#lightButton input[type="checkbox"]:checked~i {
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00a1ff, 0 0 15px #00a1ff;
+}
+
+.marchs {
+  border-radius: 5px;
+  border: 1px solid #1b1b1b;
+  /* border: 1px solid #00a1ff; */
+  width: 150px;
+  height: 250px;
+  background: #0c0c0c;
+  display: flex;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+.marchs.on {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+.marchs .bar {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.marchs .bar input[type="range"] {
+  transform: rotate(-90deg);
+}
+
+.marchs .bar span {
+  position: absolute;
+  top: 10px;
+  padding: 2px;
+  text-align: center;
+  width: 40px;
+  background: #fff;
+}
+
+.marchs .bar .range {
+  width: 210px;
+  bottom: 123px;
+  position: absolute;
+  height: 2px;
+  background: #1b1b1b;
+  -webkit-appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+.range.on::-webkit-slider-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+.marchs .bar span::before {
+  content: '';
+  bottom: -8px;
+  left: calc(50% - 8PX);
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+}
+
+.marchs .options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.marchs .options .march {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marchs .options .march label {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.marchs .options .march label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #080808;
+}
+
+.marchs .options .march label i {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.5);
+  /* color: #00ffe7;
+  text-shadow: 0 0 2px #00a1ff, 0 0 2px #00a1ff; */
+}
+
+section.simulator .panel .speedometer .speedometerPanel {
+  position: absolute;
+  top: -100px;
+  padding: 40px;
+  background: #0c0c0c;
+  border-radius: 50%;
+  top: -100px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #080808;
+}
+
+section.simulator .panel .speedometer {
+  display: flex;
+  justify-content: center;
+  color: transparent;
+  position: relative;
+}
+
+section.simulator .panel .radio {
+  /* background: cornflowerblue; */
+}

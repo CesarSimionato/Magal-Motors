@@ -1,0 +1,121 @@
+#myValues {
+  display: none;
+}
+
+.envelope {
+  background: #0F0F0F;
+  position: relative;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.envelope.on {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+.speedNobe {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  -moz-transition: all 1s;
+}
+
+.speedPosition {
+  position: absolute;
+  color: transparent;
+  text-align: center;
+  line-height: 80PX;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: #191919;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #080808;
+}
+
+.speedPosition.off {
+  color: #FFF;
+}
+
+.speedPosition.on {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 7.5px #00a1ff;
+}
+
+.fonts {
+  font-family: arial;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.speedNobe div {
+  background: #1b1b1b;
+  position: absolute;
+  height: 100%;
+  width: 92px !important;
+  top: 0;
+}
+
+.speedNobe.on div {
+  background: #00a1ff;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.numb,
+.nob {
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.nob {
+  background: #eee;
+  box-shadow: 0 0 2px 1px #eee;
+  -webkit-box-shadow: 0 0 2px 1px #eee;
+  -moz-box-shadow: 0 0 2px 1px #eee;
+  -o-box-shadow: 0 0 2px 1px #eee;
+}
+
+.numb {
+  color: #eee;
+  text-align: left;
+  overflow: hidden;
+  opacity: 0.5;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nob.bright {
+  opacity: 1;
+}
+
+.nob.danger {
+  background: #FF113A;
+  box-shadow: 0 0 2px 1px #FF113A;
+  -webkit-box-shadow: 0 0 2px 1px #FF113A;
+  -moz-box-shadow: 0 0 2px 1px #FF113A;
+  -o-box-shadow: 0 0 2px 1px #FF113A;
+}
+
+.numb.bright {
+  opacity: 1;
+}
+
+.numb.danger {
+  color: #FF113A;
+}
