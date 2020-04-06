@@ -1,6 +1,7 @@
 const allCards = document.querySelectorAll('.card');
 const after = document.querySelector('.after');
 const pre = document.querySelector('#pre');
+let carVelocity;
 
 allCards.forEach(card => {
   card.addEventListener('click', function() {
@@ -16,6 +17,9 @@ allCards.forEach(card => {
         carSelected = car;
       }
     });
+
+    carVelocity = carSelected.maximumSpeed;
+
     let img = carSelected.colors[0];
 
     after.innerHTML = `

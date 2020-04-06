@@ -139,7 +139,6 @@ $.fn.myfunc = function(userPref) {
     this.parentElem.find(".envelope").append(speedNobe + tempDiv);
   }
   this.changePosition = function() {
-    console.log($(this).val())
     var speed = $(this).val();
     if (speed > self.defaultProperty.maxVal) {
       speed = self.defaultProperty.maxVal;

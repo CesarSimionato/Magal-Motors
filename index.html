@@ -78,7 +78,7 @@
         <div class="marchs">
 
           <div class="bar">
-            <input onmousemove="rangeSlide(this.value)" onchange="rangeSlide(this.value)" type="range" class="range" id="velocity" value="0" min="0" max="180">
+            <input type="range" class="range" id="velocity" value="0" min="0" max="180">
           </div>
 
           <div class="options">
@@ -122,9 +122,13 @@
           <input id="myValues" value="0" type="text">
         </div>
       </div>
-      <div class="radio">
 
+      <div class="radioBx">
+        <div class="radio" id="radio">
+
+        </div>
       </div>
+
     </div>
 
   </section>
@@ -146,7 +150,7 @@
 <script type="text/javascript">
   $("#myValues").myfunc({
     divFact: 10,
-    eventListenerType: 'change'
+    eventListenerType: 'change',
   });
 
   let state = false;
@@ -175,7 +179,13 @@
   });
 </script>
 
-<script src="js/leds.js"></script>
+<script src="js/sounds.js"></script>
+<script src="js/radio.js"></script>
 
+<script>
+  radioStart();
+</script>
+
+<script src="js/leds.js"></script>
 
 </html>
